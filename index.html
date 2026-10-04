@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Date ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- PAGE 1 -->
+    <section id="page1" class="page active">
+        <div class="card">
+
+            <h1>Hello beautiful ❤️</h1>
+
+            <p>Will you go on a date with me?</p>
+
+            <div class="buttons">
+                <button id="yesButton">Yes 💕</button>
+                <button id="noButton">No</button>
+            </div>
+
+            <p id="noMessage"></p>
+
+        </div>
+    </section>
+
+
+    <!-- PAGE 2 -->
+    <section id="page2" class="page">
+        <div class="card">
+
+            <h1>I appreciate that you said yes ❤️</h1>
+
+            <p>
+                I'm looking forward to spending some time together.
+            </p>
+
+            <button id="continueButton">
+                Press to continue
+            </button>
+
+        </div>
+    </section>
+
+
+    <!-- PAGE 3 -->
+    <section id="page3" class="page">
+        <div class="card">
+
+            <h1>Choose your date 💕</h1>
+
+            <p>What would you like us to do?</p>
+
+            <form
+                id="dateForm"
+                action="https://formspree.io/f/xppqakrk"
+                method="POST"
+            >
+
+                <label for="activity">
+                    Choose an activity:
+                </label>
+
+                <select
+                    id="activity"
+                    name="activity"
+                    required
+                >
+                    <option value="">
+                        -- Choose an option --
+                    </option>
+
+                    <option value="Movie Night">
+                        Movie Night 🎬
+                    </option>
+
+                    <option value="Picnic">
+                        Picnic 🧺
+                    </option>
+
+                    <option value="Coffee Date">
+                        Coffee Date ☕
+                    </option>
+
+                    <option value="Just a Walk">
+                        Just a Walk 🚶
+                    </option>
+
+                    <option value="Other">
+                        Other ✨
+                    </option>
+                </select>
+
+
+                <div id="otherContainer">
+
+                    <label for="otherInput">
+                        What would you like?
+                    </label>
+
+                    <input
+                        type="text"
+                        id="otherInput"
+                        name="other_activity"
+                        placeholder="Type your idea here"
+                    >
+
+                </div>
+
+
+                <label for="date">
+                    Choose the date:
+                </label>
+
+                <input
+                    type="date"
+                    id="date"
+                    name="date"
+                    required
+                >
+
+
+                <button type="submit">
+                    Done ❤️
+                </button>
+
+                <p id="errorMessage"></p>
+
+            </form>
+
+        </div>
+    </section>
+
+
+    <!-- PAGE 4 -->
+    <section id="page4" class="page">
+        <div class="card">
+
+            <h1>It's a date! 🎉</h1>
+
+            <p id="finalMessage"></p>
+
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
