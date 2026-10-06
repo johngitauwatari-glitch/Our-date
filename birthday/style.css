@@ -1,1 +1,322 @@
+* {
+  box-sizing: border-box;
+}
 
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(
+    135deg,
+    #ffe4f0,
+    #e8ddff,
+    #dff8ff
+  );
+  color: #432c49;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+}
+
+.card {
+  width: min(92vw, 570px);
+  padding: 30px 22px;
+  border-radius: 28px;
+
+  background: rgba(255, 255, 255, 0.84);
+
+  backdrop-filter: blur(8px);
+
+  box-shadow:
+    0 15px 45px rgba(70, 40, 90, 0.18);
+}
+
+h1 {
+  font-size: clamp(2rem, 8vw, 3.2rem);
+  margin: 8px 0;
+  color: #c33f82;
+}
+
+p {
+  font-size: 1.06rem;
+  line-height: 1.65;
+}
+
+button {
+  border: none;
+  border-radius: 999px;
+
+  padding: 13px 24px;
+
+  font-size: 1rem;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  background: #c33f82;
+  color: white;
+
+  box-shadow:
+    0 7px 18px rgba(195, 63, 130, 0.25);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+.hidden {
+  display: none !important;
+}
+
+
+/* Gift */
+
+.gift {
+  font-size: 4rem;
+}
+
+
+/* Cake */
+
+.cake-wrap {
+  margin: 35px auto 20px;
+
+  position: relative;
+
+  width: 250px;
+  height: 255px;
+}
+
+.cake {
+  position: absolute;
+
+  bottom: 15px;
+  left: 25px;
+
+  width: 200px;
+  height: 110px;
+
+  background: #b86c9e;
+
+  border-radius:
+    18px 18px 25px 25px;
+}
+
+
+/* Cake top */
+
+.cake::before {
+  content: "";
+
+  position: absolute;
+
+  top: -32px;
+  left: 0;
+
+  width: 200px;
+  height: 55px;
+
+  background: #f6c7df;
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 10px #9d5b91;
+}
+
+
+/* Cake icing */
+
+.cake::after {
+  content: "";
+
+  position: absolute;
+
+  top: 8px;
+  left: 15px;
+
+  width: 170px;
+  height: 18px;
+
+  border-radius: 50%;
+
+  background: #fff0f8;
+}
+
+
+/* Candles */
+
+.candle {
+  position: absolute;
+
+  z-index: 3;
+
+  bottom: 125px;
+
+  width: 18px;
+  height: 70px;
+
+  background:
+    repeating-linear-gradient(
+      45deg,
+      #fff 0 8px,
+      #f29ac2 8px 16px
+    );
+
+  border-radius: 5px;
+}
+
+.c1 {
+  left: 88px;
+}
+
+.c2 {
+  left: 116px;
+}
+
+.c3 {
+  left: 144px;
+}
+
+
+/* Flames */
+
+.flame {
+  position: absolute;
+
+  top: -30px;
+  left: 2px;
+
+  width: 14px;
+  height: 24px;
+
+  background: #ffb300;
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 18px #ffcf55;
+
+  animation:
+    flicker 0.6s infinite alternate;
+}
+
+@keyframes flicker {
+
+  to {
+    transform:
+      scale(1.15)
+      translateY(-2px);
+  }
+
+}
+
+
+/* Age */
+
+.age {
+  position: absolute;
+
+  z-index: 5;
+
+  top: -30px;
+  left: 0;
+
+  width: 100%;
+
+  font-size: 2.25rem;
+
+  font-weight: 700;
+
+  color: #b72f78;
+}
+
+
+/* Letter */
+
+.message {
+  margin-top: 22px;
+
+  text-align: left;
+
+  background: #fff9fc;
+
+  padding: 22px;
+
+  border-radius: 20px;
+
+  border: 1px solid #f0c9dd;
+}
+
+.signature {
+  text-align: right;
+
+  font-weight: bold;
+
+  font-size: 1.1rem;
+}
+
+.feedback {
+  margin-top: 25px;
+}
+
+#celebrate {
+  font-size: 1.2rem;
+
+  font-weight: bold;
+
+  color: #b72f78;
+}
+
+
+/* Confetti */
+
+.confetti {
+ position :fixed;
+
+  top: -15px;
+
+  width: 9px;
+  height: 18px;
+
+  animation:
+    fall 3s linear forwards;
+
+  z-index: 20;
+}
+
+@keyframes fall {
+
+  to {
+    transform:
+      translateY(110vh)
+      rotate(720deg);
+
+    opacity: 0;
+  }
+
+}
+.whatsapp-btn {
+  display: inline-block;
+  text-decoration: none;
+  border: none;
+  border-radius: 999px;
+  padding: 13px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  background: #25D366;
+  color: white;
+  box-shadow: 0 7px 18px rgba(37, 211, 102, 0.25);
+}
+
+.whatsapp-btn:active {
+  transform: scale(0.97);
+}
